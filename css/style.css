@@ -185,6 +185,18 @@ body[lang="ar"] .newsletter-form {
     transform: scale(1.1);
 }
 
+.secondary-btn {
+    border-color: #f53131; /* Use a contrasting color from your design */
+    color: #f53131;
+    margin-left: 10px;
+}
+
+.secondary-btn:hover {
+    background-color: #f53131;
+    color: white;
+    transform: scale(1.1);
+}
+
 .social-icons a {
     color: rgb(255, 255, 255);
     font-size: clamp(1.2rem, 3.5vw, 1.5rem);
