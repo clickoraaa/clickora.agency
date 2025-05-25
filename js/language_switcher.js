@@ -56,6 +56,16 @@ function changeLanguage(lang) {
     });
 }
 
+//------------------------ Loader
+// Hide loader when page is fully loaded
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    loader.classList.add("hidden");
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 500); // Match CSS transition duration
+});
+
 // Set language on page load
 document.addEventListener("DOMContentLoaded", () => {
     // Load saved language, or detect browser language, or default to English
@@ -68,6 +78,50 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     changeLanguage(lang);
 });
+
+
+//-------------------------Loader(Project Filter)
+// Filter logic with spinner
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".Project-card");
+    const loader = document.getElementById("loader");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Show loader
+            loader.style.display = "flex";
+            loader.classList.add("active");
+            loader.classList.remove("hidden");
+
+            // Get filter value
+            const filter = button.getAttribute("data-filter");
+
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            // Filter projects
+            projectCards.forEach(card => {
+                const category = card.getAttribute("data-category");
+                if (filter === "all" || category === filter) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            // Hide loader after 0.8s
+            setTimeout(() => {
+                loader.classList.add("hidden");
+                setTimeout(() => {
+                    loader.style.display = "none";
+                    loader.classList.remove("active");
+                }, 500); // Match CSS transition duration
+            }, 800); // Brief delay for spinner
+        });
+    });
+    
+//---------------------End Filter Loader
 
 // Event listeners for language buttons
 document.querySelectorAll(".lang-btn").forEach(button => {
