@@ -15,6 +15,11 @@ function changeLanguage(lang) {
     document.querySelector(".service-title-3").textContent = translations[lang].service_title_3;
     document.querySelector(".service-desc-3").textContent = translations[lang].service_desc_3;
     document.querySelector("#projects .title").textContent = translations[lang].projects_title;
+    document.querySelector(".filter-label-all").textContent = translations[lang].filter_label_all;
+    document.querySelector(".filter-label-web").textContent = translations[lang].filter_label_web;
+    document.querySelector(".filter-label-social").textContent = translations[lang].filter_label_social;
+    document.querySelector(".filter-label-content").textContent = translations[lang].filter_label_content;
+    document.querySelector(".filter-label-strategy").textContent = translations[lang].filter_label_strategy;
     document.querySelector("#ourTeam .title").textContent = translations[lang].team_title;
     document.querySelector(".contact-title").textContent = translations[lang].contact_title;
     document.querySelector(".contact-team-title").textContent = translations[lang].contact_team_title;
