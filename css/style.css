@@ -50,6 +50,11 @@ header {
     color: rgb(124, 124, 124);
 }
 
+#btnMenu {
+    display: none;
+    color: black;
+    font-size: clamp(1.4rem, 4.5vw, 1.7rem);
+}
 
 section {
     padding: 80px 100px;
@@ -327,10 +332,26 @@ body[lang="ar"] .newsletter-form {
     color: rgb(9, 97, 173);
 }
 
-#btnMenu {
-    display: none;
-    color: black;
-    font-size: clamp(1.4rem, 4.5vw, 1.7rem);
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    padding: 0.5em 1.5em;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #f53131;
+    border-color: #f53131;
 }
 
 /* Our Team Section */
