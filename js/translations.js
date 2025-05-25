@@ -3,7 +3,7 @@ const translations = {
   en: {
     main_title: "Hello, we are CLICKORA.<br/><span>Marketing Agency</span>",
     main_subtitle: "Helping businesses stand out, scale up, and succeed.",
-    main_btn: "View my work",
+    main_btn: "View our work",
     services_title: "Services",
     service_title_1: "Visual & Video Content Creation",
     service_desc_1: "We create short videos and stunning visuals that make your brand pop Reels, Stories, and everything you need to stand out.",
