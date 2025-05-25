@@ -333,25 +333,33 @@ body[lang="ar"] .newsletter-form {
 }
 
 .filter-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+  display: flex;
+  gap: clamp(8px, 2vw, 12px);
+  justify-content: center;
+  margin-bottom: clamp(20px, 4vw, 30px);
 }
 
 .filter-btn {
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
-    padding: 0.5em 1.5em;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #fff;
-    cursor: pointer;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  padding: clamp(6px, 1.5vw, 10px) clamp(12px, 2.5vw, 18px);
+  border: 2px solid #f53131;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #f53131;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px; /* Ensure buttons fit longer translations */
+  text-align: center;
 }
 
 .filter-btn:hover, .filter-btn.active {
-    background-color: #f53131;
-    border-color: #f53131;
+  background-color: #f53131;
+  color: #fff;
+}
+
+.filter-btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(245, 49, 49, 0.5);
 }
 
 /* Our Team Section */
@@ -1071,4 +1079,32 @@ body[lang="ar"] .newsletter-form {
         font-size: clamp(0.5rem, 1.2vw, 0.7rem);
         padding: clamp(3px, 0.8vw, 5px) clamp(6px, 1.2vw, 8px);
     }
+}
+
+/* Responsive for filter project btns*/
+@media (max-width: 768px) {
+  .filter-buttons {
+    gap: clamp(6px, 1.5vw, 8px);
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+
+  .filter-btn {
+    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+    padding: clamp(5px, 1.2vw, 8px) clamp(10px, 2vw, 15px);
+    min-width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-buttons {
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-btn {
+    font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+    padding: clamp(4px, 1vw, 6px) clamp(8px, 1.5vw, 12px);
+    min-width: 60px;
+  }
 }
