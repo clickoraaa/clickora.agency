@@ -11,6 +11,33 @@
     list-style: none;
 }
 
+/* Notification Styles */
+.notification {
+    position: fixed;
+    top: 80px; /* Below the fixed header */
+    right: 20px;
+    background-color: #43f068;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.notification.error {
+    background-color: #f04343;
+}
+
+.notification i {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
 /* Loader */
 .loader {
   position: fixed;
@@ -102,10 +129,6 @@ header {
     font-size: clamp(1.4rem, 4.5vw, 1.7rem);
 }
 
-section {
-    padding: 80px 100px;
-}
-
 /*Language Switcher*/
 .language-switcher {
     position: fixed;
@@ -182,6 +205,7 @@ body[lang="ar"] .newsletter-form {
 /* Main Section */
 
 .main {
+    padding: 80px 100px;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -260,6 +284,7 @@ body[lang="ar"] .newsletter-form {
 
 /* Services Sections */
 #services {
+    padding: 80px 100px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -317,7 +342,9 @@ body[lang="ar"] .newsletter-form {
 
 /* Projects Section */
 .projects {
+    padding: 80px 100px;
     background-color: black;
+    min-height: 100vh;
 }
 
 .projects .content {
@@ -410,6 +437,7 @@ body[lang="ar"] .newsletter-form {
 
 /* Our Team Section */
 #ourTeam {
+    padding: 80px 100px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -528,6 +556,7 @@ body[lang="ar"] .newsletter-form {
 
 /* Newsletter*/
 .newsletter {
+    padding: 80px 100px;
     padding: clamp(20px, 5vw, 40px) clamp(20px, 10vw, 100px);
     text-align: center;
     background-color: #fff; /* Matches your card backgrounds */
@@ -584,6 +613,7 @@ body[lang="ar"] .newsletter-form {
 
 /* Contact Section */
 #contact {
+    padding: 80px 100px;
     min-height: 90vh;
     display: flex;
     justify-content: center;
@@ -636,7 +666,7 @@ body[lang="ar"] .newsletter-form {
     margin-bottom: 20px;
 }
 
-.online-sub form {
+.online-sub div {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -713,6 +743,7 @@ body[lang="ar"] .newsletter-form {
 
 /* Copyright Sections */
 .copyright {
+    padding: 80px 100px;
     background-color: rgb(58, 58, 58);
     padding: 10px;
 }

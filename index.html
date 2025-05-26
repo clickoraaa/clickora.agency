@@ -55,6 +55,18 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="image/favicon.png" type="image/png" />
 
+    <!-- EmailJS -->
+     <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
+      <script type="text/javascript">
+        (function(){
+            emailjs.init({
+              publicKey: "fXL-00KmAH24Yf-JI",
+            });
+        })();
+      </script>
+
     <!-- Title -->
     <title>CLICKORA⁺ | Marketing Agency</title>
   </head>
@@ -331,7 +343,7 @@
           </div>
           <div class="team_item_content">
             <h2>Mohamed Rayen Elmi</h2>
-            <span>Web Developer</span>
+            <span>Web Solutions Expert</span>
           </div>
         </div>
       </div>
@@ -340,22 +352,19 @@
     <!-- Newsletter -->
     <section class="newsletter">
       <h2 class="title newsletter-title">Subscribe To Our Newsletter</h2>
-      <form
-        action="https://formsubmit.co/03e63fcb79a7f78dea8a536b0bfa730b"
-        method="POST"
-        class="newsletter-form"
-        aria-label="Newsletter subscription"
-      >
+      <div
+        class="newsletter-form">
         <input
           type="email"
           name="email"
+          id="email_newsletter"
           placeholder="Your Email"
           required
           autocomplete="off"
           class="newsletter-email"
         />
-        <button type="submit" class="newsletter-submit">Subscribe</button>
-      </form>
+        <button type="submit" onclick="subscribeNewsletter()" class="newsletter-submit">Subscribe</button>
+      </div>
     </section>
 
     <!--  Contact Section -->
@@ -364,14 +373,11 @@
       <div class="content">
         <div class="online-sub">
           <h2 class="contact-team-title">Contact Our Team</h2>
-          <form
-            action="https://formsubmit.co/03e63fcb79a7f78dea8a536b0bfa730b"
-            method="post"
-            aria-label="Contact form"
-          >
+          <div>
             <input
               type="text"
               name="Name"
+              id="Name"
               placeholder="Your Name"
               required
               autocomplete="off"
@@ -380,12 +386,13 @@
             <input
               type="email"
               name="Email"
+              id="Email"
               placeholder="Your Email"
               required
               autocomplete="off"
               class="contact-email"
             />
-            <select name="Continent" class="contact-service">
+            <select name="Continent" id="Service" class="contact-service">
               <option
                 value=""
                 disabled
@@ -410,13 +417,14 @@
             </select>
             <textarea
               name="Message"
+              id="Message"
               placeholder="Your Message"
               required
               autocomplete="off"
               class="contact-message"
             ></textarea>
-            <button type="submit" class="contact-submit">Send Request</button>
-          </form>
+            <button type="submit" onclick="Email()" class="contact-submit">Send Request</button>
+          </div>
         </div>
 
         <div class="contact-card">
@@ -454,6 +462,7 @@
     </div>
 
     <!-- Script Section -->
+     <script src="js/email_js.js"></script>
     <script src="js/translations.js"></script>
     <script src="js/burger_links.js"></script>
     <script src="js/language_switcher.js"></script>
