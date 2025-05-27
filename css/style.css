@@ -14,18 +14,18 @@
 /* Notification Styles */
 .notification {
     position: fixed;
-    top: 80px; /* Below the fixed header */
-    right: 20px;
+    top: clamp(60px, 10vw, 80px); /* Adjusts based on viewport, stays below header */
+    right: clamp(10px, 3vw, 20px); /* Responsive right margin */
     background-color: #43f068;
     color: white;
-    padding: 15px 20px;
+    padding: clamp(10px, 2.5vw, 15px) clamp(15px, 3vw, 20px); /* Responsive padding */
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: clamp(0.8rem, 2vw, 1rem);
+    gap: clamp(8px, 2vw, 10px); /* Responsive gap */
+    font-size: clamp(0.7rem, 1.8vw, 0.9rem); /* Adjusted for smaller screens */
     opacity: 1;
     transition: opacity 0.5s ease;
 }
@@ -100,13 +100,6 @@ header {
 .logo img{
     width: 220px;
 }
-
-/* .logo {
-    color: black;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: clamp(1.4rem, 4.5vw, 1.8rem);
-} */
 
 .navigation {
     display: flex;
@@ -1142,6 +1135,15 @@ body[lang="ar"] .newsletter-form {
         font-size: clamp(0.6rem, 1.5vw, 0.8rem);
         padding: clamp(4px, 1vw, 6px) clamp(8px, 1.5vw, 10px);
     }
+
+    /* Notification */
+    .notification {
+        top: clamp(50px, 8vw, 70px); /* Closer to header on smaller screens */
+        right: clamp(8px, 2.5vw, 15px);
+        padding: clamp(8px, 2vw, 12px) clamp(12px, 2.5vw, 15px);
+        font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+        gap: clamp(6px, 1.5vw, 8px);
+    }
 }
 
 @media (max-width: 480px) {
@@ -1184,4 +1186,322 @@ body[lang="ar"] .newsletter-form {
     padding: clamp(4px, 1vw, 6px) clamp(8px, 1.5vw, 12px);
     min-width: 60px;
   }
+}
+
+/* Responsive Design for 425px and below */
+@media (max-width: 425px) {
+    header {
+        padding: 0 8px;
+        height: 40px;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    #btnMenu {
+        font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+    }
+
+    header .navigation {
+        width: clamp(160px, 60vw, 200px);
+        right: calc(-1 * clamp(160px, 60vw, 200px));
+        height: calc(100vh - 40px);
+    }
+
+    .navigation a {
+        font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+        padding: 8px 0;
+    }
+
+    section,
+    .contact-sec {
+        padding: 15px 8px;
+        padding-top: 50px;
+    }
+
+    .main {
+        padding: 15px 8px;
+        padding-top: 50px;
+    }
+
+    .main h2 {
+        font-size: clamp(0.7rem, 2.2vw, 0.8rem);
+    }
+
+    .main h2 span {
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
+    }
+
+    .main h3 {
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
+    }
+
+    .main-btn {
+        font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+        padding: 0.4em 1em;
+        margin-bottom: 20px;
+    }
+
+    .secondary-btn {
+        margin-left: 5px;
+    }
+
+    .social-icons a {
+        font-size: clamp(0.8rem, 2.2vw, 1rem);
+        padding-right: 5px;
+    }
+
+    .title {
+        font-size: clamp(1rem, 3vw, 1.3rem);
+        margin-bottom: 15px;
+    }
+
+    .content {
+        gap: clamp(8px, 2vw, 10px);
+    }
+
+    /* Services Section */
+    #services {
+        padding: 15px 8px;
+    }
+
+    .card {
+        padding: 6px;
+        margin: 5px;
+        max-width: 100%;
+        min-width: auto;
+    }
+
+    .icon {
+        font-size: clamp(2.5rem, 7vw, 3.5rem);
+    }
+
+    .info h3 {
+        font-size: clamp(0.7rem, 1.8vw, 0.8rem);
+    }
+
+    .info p {
+        font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+    }
+
+    /* Projects Section */
+    .projects {
+        padding: 15px 8px;
+    }
+
+    .Project-card {
+        margin: 6px;
+        max-width: 100%;
+        min-width: auto;
+        min-height: 10em;
+    }
+
+    .project-image img {
+        height: 120px;
+        object-fit: cover;
+    }
+
+    .project-info {
+        padding: 0.6em;
+    }
+
+    .project-category {
+        font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+    }
+
+    .project-titel {
+        font-size: clamp(0.7rem, 1.8vw, 0.8rem);
+    }
+
+    .more-details {
+        font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+    }
+
+    .filter-buttons {
+        gap: 4px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn {
+        font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+        padding: clamp(4px, 1vw, 5px) clamp(8px, 1.5vw, 10px);
+        min-width: 55px;
+    }
+
+    /* Our Team Section */
+    #ourTeam {
+        padding: 15px 8px;
+    }
+
+    #ourTeam .content {
+        gap: 15px;
+    }
+
+    #ourTeam .content .team_box {
+        max-width: 260px;
+    }
+
+    #ourTeam .content .team_box .team_item_thumb {
+        height: 340px;
+    }
+
+    #ourTeam .content .team_img {
+        object-fit: cover;
+    }
+
+    #ourTeam .content .team_item_icon {
+        width: 32px;
+        height: 32px;
+        bottom: 40px;
+        right: 20px;
+    }
+
+    #ourTeam .content .team_icon {
+        right: 20px;
+        padding: 5px 0 15px 0;
+        width: 32px;
+    }
+
+    #ourTeam .content .team_icon a {
+        padding: 5px 0;
+    }
+
+    #ourTeam .content .team_item_content {
+        margin-top: 15px;
+    }
+
+    #ourTeam .content .team_item_content h2 {
+        font-size: clamp(0.9rem, 3.5vw, 1rem);
+    }
+
+    #ourTeam .content .team_item_content span {
+        font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+    }
+
+    /* Newsletter Section */
+    .newsletter {
+        padding: clamp(6px, 2.5vw, 12px) clamp(6px, 4vw, 15px);
+    }
+
+    .newsletter .title {
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
+    }
+
+    .newsletter-form {
+        max-width: clamp(160px, 75vw, 280px);
+    }
+
+    .newsletter-form input {
+        font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+        padding: clamp(5px, 1.2vw, 6px);
+    }
+
+    .newsletter-form button {
+        font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+        padding: clamp(5px, 1.2vw, 6px) clamp(10px, 2.5vw, 12px);
+    }
+
+    /* Contact Section */
+    #contact {
+        padding: 15px 8px;
+        min-height: auto;
+    }
+
+    .contact-sec {
+        padding: 15px 8px;
+        max-width: 100%;
+    }
+
+    .contact-sec .content {
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(8px, 2vw, 12px);
+    }
+
+    .online-sub, .contact-card {
+        padding: 10px;
+        min-height: clamp(180px, 40vw, 280px);
+        width: 100%;
+        max-width: clamp(14em, 75vw, 16em);
+        margin: 5px 0;
+    }
+
+    .online-sub h2 {
+        font-size: clamp(0.9rem, 2.2vw, 1rem);
+        margin-bottom: 12px;
+    }
+
+    .online-sub div {
+        gap: 10px;
+    }
+
+    .online-sub input,
+    .online-sub select,
+    .online-sub textarea {
+        font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+        padding: 5px;
+        border-radius: 4px;
+    }
+
+    .online-sub textarea {
+        min-height: 80px;
+    }
+
+    .online-sub button {
+        font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+        padding: 0.4em 1em;
+        border-radius: 4px;
+    }
+
+    .contact-card {
+        padding: 10px;
+    }
+
+    .contact-card h3 {
+        font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+        margin: 8px 0 4px;
+    }
+
+    .contact-card p {
+        font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+        margin: 4px 0;
+    }
+
+    .contact-card i {
+        font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+        margin-right: 5px;
+    }
+
+    /* Language Switcher */
+    .language-switcher {
+        bottom: 8px;
+        right: 8px;
+        gap: 4px;
+        flex-direction: column;
+    }
+
+    .lang-btn {
+        font-size: clamp(0.5rem, 1.2vw, 0.6rem);
+        padding: clamp(3px, 0.8vw, 4px) clamp(5px, 1vw, 6px);
+    }
+
+    /* Copyright Section */
+    .copyright {
+        padding: 8px;
+    }
+
+    .copyright .content {
+        font-size: clamp(0.6rem, 1.5vw, 0.7rem);
+    }
+
+    /* Notification */
+    .notification {
+        top: clamp(45px, 7vw, 60px); /* Further adjusted for very small screens */
+        right: clamp(6px, 2vw, 10px);
+        padding: clamp(6px, 1.8vw, 10px) clamp(10px, 2vw, 12px);
+        font-size: clamp(0.5rem, 1.2vw, 0.7rem);
+        gap: clamp(5px, 1.2vw, 6px);
+    }
 }
