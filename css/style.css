@@ -203,7 +203,7 @@ body[lang="ar"] .newsletter-form {
     min-height: 100vh;
     display: flex;
     align-items: center; 
-    background: url(../image/ftyu4.jpg) no-repeat;
+    background: url(../assets/image/ftyu4.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1293,12 +1293,10 @@ body[lang="ar"] .newsletter-form {
     .Project-card {
         margin: 6px;
         max-width: 100%;
-        min-width: auto;
         min-height: 10em;
     }
 
     .project-image img {
-        height: 120px;
         object-fit: cover;
     }
 
