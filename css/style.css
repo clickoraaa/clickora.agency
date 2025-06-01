@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* root for team card */
+:root {
+    --primary: #060606;
+    --primary-light: #a29bfe;
+    --primary-dark: #4834d4;
+    --gold: #da9347;
+    --white: #fff;
+    --background: #F8F8FF;
+    --text: #424242;
+
+    --profile-headline: #edf2ee;
+    --profile-text: #ffffff;
+    /* btn primary */
+    --primary-bg: #ffffff;
+    --primary-text: #060606;
+}
+
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -481,7 +498,7 @@ body[lang="ar"] .newsletter-form {
     border-radius: 50%;
     background: rgb(9, 97, 173);;
     transition: .3s;
-    color: #ffffff;
+    color: var(--white);
     position: absolute;
     bottom: 50px;
     right: 30px;

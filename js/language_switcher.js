@@ -21,6 +21,21 @@ function changeLanguage(lang) {
     document.querySelector(".filter-label-content").textContent = translations[lang].filter_label_content;
     document.querySelector(".filter-label-strategy").textContent = translations[lang].filter_label_strategy;
     document.querySelector("#ourTeam .title").textContent = translations[lang].team_title;
+    document.querySelectorAll("#ourTeam .content .profile .profile__wrapper .profile__content .description").forEach((p, index) => {
+    if (index === 0) {
+        p.textContent = translations[lang].team_founder; // Founder & Creative Director
+    } else if (index === 1) {
+        p.textContent = translations[lang].team_web_expert; // Web Solutions Expert
+    }
+    });
+    document.querySelectorAll("#ourTeam .content .profile .profile__wrapper .profile__content .button-actions .primary").forEach(button => {
+    // Get the existing SVG element
+    const svg = button.querySelector('svg');
+    // Update only the text content, preserving the SVG
+    button.innerHTML = '';
+    button.appendChild(svg); // Re-append the SVG
+    button.insertAdjacentText('beforeend', translations[lang].team_btn);
+    });
     document.querySelector(".contact-title").textContent = translations[lang].contact_title;
     document.querySelector(".contact-team-title").textContent = translations[lang].contact_team_title;
     document.querySelector(".contact-name").setAttribute("placeholder", translations[lang].contact_name);
