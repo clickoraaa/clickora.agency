@@ -22,8 +22,8 @@ function changeLanguage(lang) {
     document.querySelector(".filter-label-strategy").textContent = translations[lang].filter_label_strategy;
     document.querySelector(".packages-title").textContent = translations[lang].packages_title;
     document.querySelector(".packages-subtitle").textContent = translations[lang].packages_subtitle;
-    document.querySelectorAll(".package-category-title")[0].textContent = translations[lang].package_category_title1;
-    document.querySelectorAll(".package-category-title")[1].textContent = translations[lang].package_category_title2;
+    document.querySelectorAll(".package-category-title")[0].innerHTML = `<i class="fas fa-camera"></i> ${translations[lang].package_category_title1}`;
+    document.querySelectorAll(".package-category-title")[1].innerHTML = `<i class="fas fa-globe"></i> ${translations[lang].package_category_title2}`;
     document.querySelectorAll(".package-delivery").forEach((el, index) => {
         el.textContent = translations[lang].package_delivery + (index === 0 ? ": Weekly post scheduling" : index === 1 ? ": Weekly content batches" : index === 2 ? ": Full monthly content calendar" : index === 3 ? ": 3–5 working days" : index === 4 ? ": 7–10 working days" : ": 14–20 working days");
     });
