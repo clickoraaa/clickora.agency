@@ -220,7 +220,7 @@ body[lang="ar"] .newsletter-form {
     min-height: 100vh;
     display: flex;
     align-items: center; 
-    background: url(../assets/image/ftyu4.png) no-repeat;
+    background: url(../image/ftyu4.png) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
