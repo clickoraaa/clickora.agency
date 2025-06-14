@@ -75,6 +75,10 @@
 
     <!-- Title -->
     <title>CLICKORA⁺ | Marketing Agency</title>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   </head>
   <body>
 
@@ -97,7 +101,7 @@
     </header>
 
     <!-- Main Section -->
-    <section class="main">
+    <section class="main" data-aos="fade-in">
       <div>
         <h2>Hello, we are CLICKORA.<br /><span>Marketing Agency</span></h2>
         <h3>Helping businesses stand out, scale up, and succeed.</h3>
@@ -120,7 +124,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="cards" id="services">
+    <section class="cards" id="services" data-aos="fade-up">
       <h2 class="title">Services</h2>
       <div class="content">
         <div class="card">
@@ -165,7 +169,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <section class="projects" id="projects" data-aos="fade-up" data-aos-delay="100">
       <h2 class="title" style="color: white">Projects</h2>
       <div class="filter-buttons">
         <button class="filter-btn active" data-filter="all">
@@ -431,7 +435,7 @@
   </section>
 
     <!-- Our Team Section -->
-    <section class="cards" id="ourTeam">
+    <section class="cards" id="ourTeam" data-aos="fade-up" data-aos-delay="200">
   <h2 class="title">Discover Our Team</h2>
   <div class="content">
     <article class="profile">
@@ -482,7 +486,7 @@
 </section>
 
     <!-- Newsletter -->
-    <section class="newsletter">
+    <section class="newsletter" data-aos="fade-up" data-aos-delay="250">
       <h2 class="title newsletter-title">Subscribe To Our Newsletter</h2>
       <div
         class="newsletter-form">
@@ -500,7 +504,7 @@
     </section>
 
     <!--  Contact Section -->
-    <section class="contact-sec" id="contact">
+    <section class="contact-sec" id="contact" data-aos="fade-up" data-aos-delay="300">
     <h2 class="title contact-title">Contact Us</h2>
     <div class="content">
       <div class="online-sub">
@@ -643,6 +647,16 @@
 </div>
 
     <!-- Script Section -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 800, // animation duration in milliseconds
+        easing: 'ease-in-out', // default easing
+        once: true, // whether animation should happen only once
+        offset: 100, // offset (in px) from the original trigger point
+      });
+    </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/email_js.js"></script>
     <script src="assets/js/translations.js"></script>
