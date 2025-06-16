@@ -39,6 +39,10 @@ function changeLanguage(lang) {
         p.textContent = translations[lang].team_founder; // Founder & Creative Director
     } else if (index === 1) {
         p.textContent = translations[lang].team_web_expert; // Web Solutions Expert
+    } else if (index === 2) {
+        p.textContent = translations[lang].team_member3; // Jawher
+    } else if (index === 3) {
+        p.textContent = translations[lang].team_member4; // Sahar
     }
     });
     document.querySelectorAll("#ourTeam .content .profile .profile__wrapper .profile__content .button-actions .primary").forEach(button => {
