@@ -1578,7 +1578,10 @@ body[lang="ar"] .newsletter-form {
 .swiper {
   width: 100%;
   max-width: 100%;
-  height: 500px; /* Increased fixed height for all screen sizes */
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .swiper-slide img {
@@ -1586,6 +1589,18 @@ body[lang="ar"] .newsletter-form {
   height: 100%;
   object-fit: scale-down;
   border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide video {
+  width: 80%; /* Reduce video width */
+  max-height: 90%; /* Reduce video height */
+  object-fit: contain; /* Ensures video scales without cropping */
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #000; /* Black background for video player */
+  margin: auto; /* Center video within slide */
+  display: block; /* Ensure proper centering */
 }
 
 .swiper-pagination-bullet {
@@ -1596,18 +1611,6 @@ body[lang="ar"] .newsletter-form {
 .swiper-pagination-bullet-active {
   opacity: 1;
 }
-
-/* .swiper-button-next,
-.swiper-button-prev {
-  color: #f53131 !important;
-  width: clamp(30px, 5vw, 40px);
-  height: clamp(30px, 5vw, 40px);
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-} */
 
 /* Responsive Modal and Swiper */
 @media (max-width: 768px) {
@@ -1620,16 +1623,15 @@ body[lang="ar"] .newsletter-form {
     font-size: clamp(1rem, 2.5vw, 1.2rem);
   }
 
-  /* .swiper-button-next,
-  .swiper-button-prev {
-    width: clamp(25px, 4vw, 30px);
-    height: clamp(25px, 4vw, 30px);
+  .swiper {
+    height: 400px; /* Adjust height for smaller screens */
   }
 
-  .swiper-button-next:after,
-  .swiper-button-prev:after {
-    font-size: clamp(0.8rem, 2vw, 1rem);
-  } */
+  .swiper-slide video {
+    width: 80%; /* Slightly wider for smaller screens */
+    max-height: 350px; /* Smaller height */
+    height: auto; /* Allow natural video height */
+  }
 }
 
 @media (max-width: 480px) {
@@ -1642,14 +1644,12 @@ body[lang="ar"] .newsletter-form {
     font-size: clamp(0.9rem, 2.2vw, 1rem);
   }
 
-  /* .swiper-button-next,
-  .swiper-button-prev {
-    width: clamp(20px, 3.5vw, 25px);
-    height: clamp(20px, 3.5vw, 25px);
+  .swiper {
+    height: 300px; /* Further reduce height for mobile */
   }
 
-  .swiper-button-next:after,
-  .swiper-button-prev:after {
-    font-size: clamp(0.7rem, 1.8vw, 0.8rem);
-  } */
+  .swiper-slide video {
+    width: 80%;
+    max-height: 250px; /* Even smaller height for mobile */
+  }
 }

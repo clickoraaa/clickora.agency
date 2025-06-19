@@ -1,14 +1,31 @@
-// Project data with images for each project (extend this for other projects)
+// Project data with images and videos for each project
   const projectData = {
     project1: {
-      title: 'Web & Landing Pages Project',
+      title: 'Content Creation Project',
       images: [
-        { src: 'assets/image/Logo_B.jpg', alt: 'Project 1 Image 1' },
-        { src: 'assets/image/Logo_W.jpg', alt: 'Project 1 Image 2' },
-        { src: 'assets/image/Flyer.png', alt: 'Project 1 Image 3' }
+        { src: 'assets/image/projects/lego land/logo.jfif', alt: 'Project 1 Image 1' },
+        { src: 'assets/image/projects/lego land/poster.jfif', alt: 'Project 1 Image 2' }
+      ],
+      videos: [
+        { src: 'assets/image/projects/lego land/video1.mp4', alt: 'Project 1 Video', type: 'video/mp4' }
       ]
     },
-    project2: {
+    project3: {
+      title: 'Content Creation Project',
+      images: [
+        { src: 'assets/image/projects/yakuza clan/j.png', alt: 'Project 5 Image 1' },
+        { src: 'assets/image/projects/yakuza clan/meeting_HOUR.png', alt: 'Project 5 Image 2' }
+      ]
+    },
+    project4: {
+      title: 'Marketing Strategy Project',
+      images: [
+        { src: 'assets/image/projects/new life fitness/logo_grey.jpeg', alt: 'Project 6 Image 1' },
+        { src: 'assets/image/projects/new life fitness/logo_b.jpeg', alt: 'Project 6 Image 2' },
+        { src: 'assets/image/projects/new life fitness/t-shirt.jpeg', alt: 'Project 6 Image 3' }
+      ]
+    },
+    project5: {
       title: 'Web & Landing Pages Project',
       images: [
         { src: 'assets/image/projects/CRM FrontEnd Design/1__authentification.png', alt: 'Project 2 Image 1' },
@@ -19,26 +36,11 @@
         { src: 'assets/image/projects/CRM FrontEnd Design/6__menu.png', alt: 'Project 2 Image 6' }
       ]
     },
-    project3: {
+    project6: {
       title: 'Social Media Management Project',
       images: [
         { src: 'assets/image/qr_code.jpeg', alt: 'Project 3 Image 1' },
         { src: 'assets/image/coming_soon.gif', alt: 'Project 3 Image 2' }
-      ]
-    },
-    project5: {
-      title: 'Content Creation Project',
-      images: [
-        { src: 'assets/image/projects/yakuza clan/j.png', alt: 'Project 5 Image 1' },
-        { src: 'assets/image/projects/yakuza clan/meeting_HOUR.png', alt: 'Project 5 Image 2' }
-      ]
-    },
-    project6: {
-      title: 'Marketing Strategy Project',
-      images: [
-        { src: 'assets/image/projects/new life fitness/logo_grey.jpeg', alt: 'Project 6 Image 1' },
-        { src: 'assets/image/projects/new life fitness/logo_b.jpeg', alt: 'Project 6 Image 2' },
-        { src: 'assets/image/projects/new life fitness/t-shirt.jpeg', alt: 'Project 6 Image 3' }
       ]
     },
     project7: {
@@ -47,8 +49,14 @@
         { src: 'assets/image/coming_soon.gif', alt: 'Project 7 Image 1' },
         { src: 'assets/image/Logo_W.jpg', alt: 'Project 7 Image 2' }
       ]
+    },
+    project8: {
+      title: 'Social Media Management Project',
+      images: [
+        { src: 'assets/image/coming_soon.gif', alt: 'Project 8 Image 1' },
+        { src: 'assets/image/Logo_W.jpg', alt: 'Project 8 Image 2' }
+      ]
     }
-    // Add more projects here, e.g., project2: { title: '...', images: [...] }
   };
 
   // Modal elements
@@ -93,10 +101,20 @@
         // Set modal title
         modalTitle.textContent = project.title;
         
-        // Populate Swiper slides
-        swiperSlides.innerHTML = project.images.map(img => 
-          `<div class="swiper-slide"><img src="${img.src}" alt="${img.alt}" loading="lazy"></div>`
-        ).join('');
+        // Populate Swiper slides with images and videos
+        swiperSlides.innerHTML = [
+          ...(project.images || []).map(img => 
+            `<div class="swiper-slide"><img src="${img.src}" alt="${img.alt}" loading="lazy"></div>`
+          ),
+          ...(project.videos || []).map(video => 
+            `<div class="swiper-slide">
+              <video controls muted>
+                <source src="${video.src}" type="${video.type}">
+                <p>Your browser does not support this video format. Please check the file path: ${video.src}</p>
+              </video>
+            </div>`
+          )
+        ].join('');
         
         // Show modal
         modal.style.display = 'flex';
@@ -105,6 +123,13 @@
         
         // Initialize Swiper
         initializeSwiper();
+
+        // Add error handling for video loading
+        document.querySelectorAll('video source').forEach(source => {
+          source.addEventListener('error', () => {
+            console.error(`Failed to load video: ${source.src}`);
+          });
+        });
       }
     });
   });
@@ -114,6 +139,8 @@
     modal.style.display = 'none';
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = 'auto';
+    // Pause all videos when closing modal
+    document.querySelectorAll('video').forEach(video => video.pause());
   });
 
   // Close modal when clicking outside
@@ -122,6 +149,8 @@
       modal.style.display = 'none';
       modal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = 'auto';
+      // Pause all videos when closing modal
+      document.querySelectorAll('video').forEach(video => video.pause());
     }
   });
 
@@ -131,5 +160,7 @@
       modal.style.display = 'none';
       modal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = 'auto';
+      // Pause all videos when closing modal
+      document.querySelectorAll('video').forEach(video => video.pause());
     }
   });
