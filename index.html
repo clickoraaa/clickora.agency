@@ -87,9 +87,9 @@
     </div>
 
     <header>
-      <a href="#" class="logo"
-        ><img src="assets/image/Logo_NoBg.png" alt="CLICKORA⁺"
-      /></a>
+      <a href="#" class="logo">
+        <img src="assets/image/Logo_NoBg.png" alt="CLICKORA⁺"/>
+      </a>
       <nav class="navigation">
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
@@ -101,7 +101,18 @@
     </header>
 
     <!-- Main Section -->
+    
+    <audio id="background-music" loop>
+      <source src="assets/audio/song.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-toggle" class="music-btn" title="Play/Stop Music">
+      <i class="fas fa-play"></i>
+    </button>
     <section class="main" data-aos="fade-in">
+      <video class="background-video" autoplay muted loop playsinline>
+            <source src="assets/video/video3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
       <div>
         <h2>Hello, we are CLICKORA.<br /><span>Marketing Agency</span></h2>
         <h3>Helping businesses stand out, scale up, and succeed.</h3>
@@ -708,6 +719,7 @@
     <script src="assets/js/language_switcher.js"></script>
     <script src="assets/js/filter_project.js"></script>
     <script src="assets/js/modalProject.js"></script>
+    <script src="assets/js/song.js"></script>
 
   </body>
 </html>
