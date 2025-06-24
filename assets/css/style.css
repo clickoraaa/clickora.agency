@@ -28,6 +28,10 @@
     list-style: none;
 }
 
+video {
+    display: block;
+}
+
 /* Notification Styles */
 .notification {
     position: fixed;
@@ -245,17 +249,15 @@ body[lang="ar"] .newsletter-form {
 
 .background-video {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     /* Ensure video fills section */
     z-index: -1;
     /* Place video behind content */
+    pointer-events: none;
 }
 
 .main h2 {
