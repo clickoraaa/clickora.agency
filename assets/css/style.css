@@ -1276,7 +1276,7 @@ body[lang="ar"] .newsletter-form {
     .filter-btn {
         font-size: clamp(0.6rem, 1.5vw, 0.8rem);
         padding: clamp(4px, 1vw, 6px) clamp(8px, 1.5vw, 12px);
-        min-width: 60px;
+        min-width: 150px;
     }
 }
 
@@ -1417,7 +1417,7 @@ body[lang="ar"] .newsletter-form {
     .filter-btn {
         font-size: clamp(0.6rem, 1.5vw, 0.7rem);
         padding: clamp(4px, 1vw, 5px) clamp(8px, 1.5vw, 10px);
-        min-width: 55px;
+        min-width: 150px;
     }
 
     /* Our Team Section */
