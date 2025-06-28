@@ -127,6 +127,12 @@
   transform: scale(1.1);
 }
 
+#ourTeam .content .profile .profile__wrapper .button-actions .portfolio-btn:hover {
+  background-color: #f53131;
+  color: var(--white);
+  transform: scale(1.1);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   #ourTeam .content .profile {
