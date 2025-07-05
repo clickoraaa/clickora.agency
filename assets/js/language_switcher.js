@@ -35,23 +35,23 @@ function changeLanguage(lang) {
     });
     document.querySelector("#ourTeam .title").textContent = translations[lang].team_title;
     document.querySelectorAll("#ourTeam .content .profile .profile__wrapper .profile__content .description").forEach((p, index) => {
-    if (index === 0) {
-        p.textContent = translations[lang].team_founder; // Founder & Creative Director
-    } else if (index === 1) {
-        p.textContent = translations[lang].team_web_expert; // Web Solutions Expert
-    } else if (index === 2) {
-        p.textContent = translations[lang].team_member3; // Jawher
-    } else if (index === 3) {
-        p.textContent = translations[lang].team_member4; // Sahar
-    }
+        if (index === 0) {
+            p.textContent = translations[lang].team_founder; // Founder & Creative Director
+        } else if (index === 1) {
+            p.textContent = translations[lang].team_web_expert; // Web Solutions Expert
+        } else if (index === 2) {
+            p.textContent = translations[lang].team_member3; // Jawher
+        } else if (index === 3) {
+            p.textContent = translations[lang].team_member4; // Sahar
+        }
     });
     document.querySelectorAll("#ourTeam .content .profile .profile__wrapper .profile__content .button-actions .primary").forEach(button => {
-    // Get the existing SVG element
-    const svg = button.querySelector('svg');
-    // Update only the text content, preserving the SVG
-    button.innerHTML = '';
-    button.appendChild(svg); // Re-append the SVG
-    button.insertAdjacentText('beforeend', translations[lang].team_btn);
+        // Get the existing SVG element
+        const svg = button.querySelector('svg');
+        // Update only the text content, preserving the SVG
+        button.innerHTML = '';
+        button.appendChild(svg); // Re-append the SVG
+        button.insertAdjacentText('beforeend', translations[lang].team_btn);
     });
     document.querySelector(".contact-title").textContent = translations[lang].contact_title;
     document.querySelector(".contact-team-title").textContent = translations[lang].contact_team_title;
@@ -78,6 +78,12 @@ function changeLanguage(lang) {
     document.querySelector(".newsletter-email").setAttribute("placeholder", translations[lang].newsletter_email);
     document.querySelector(".newsletter-submit").textContent = translations[lang].newsletter_submit;
     document.querySelector(".copyright-text").textContent = translations[lang].copyright_text;
+
+    // Footer translations
+    document.querySelector(".footer-column:nth-child(1) h3").textContent = translations[lang].footer_about_title;
+    document.querySelector(".footer-column:nth-child(1) p").textContent = translations[lang].footer_about_desc;
+    document.querySelector(".footer-column:nth-child(2) h3").textContent = translations[lang].footer_quick_links;
+    document.querySelector(".footer-column:nth-child(3) h3").textContent = translations[lang].footer_follow_us;
 
     // Save language preference to localStorage
     localStorage.setItem("preferredLanguage", lang);
@@ -114,48 +120,47 @@ document.addEventListener("DOMContentLoaded", () => {
     changeLanguage(lang);
 });
 
-
 //-------------------------Loader(Project Filter)
 // Filter logic with spinner
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const projectCards = document.querySelectorAll(".Project-card");
-    const loader = document.getElementById("loader");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".Project-card");
+const loader = document.getElementById("loader");
 
-    filterButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            // Show loader
-            loader.style.display = "flex";
-            loader.classList.add("active");
-            loader.classList.remove("hidden");
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        // Show loader
+        loader.style.display = "flex";
+        loader.classList.add("active");
+        loader.classList.remove("hidden");
 
-            // Get filter value
-            const filter = button.getAttribute("data-filter");
+        // Get filter value
+        const filter = button.getAttribute("data-filter");
 
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove("active"));
-            button.classList.add("active");
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
 
-            // Filter projects
-            projectCards.forEach(card => {
-                const category = card.getAttribute("data-category");
-                if (filter === "all" || category === filter) {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
-                }
-            });
-
-            // Hide loader after 0.8s
-            setTimeout(() => {
-                loader.classList.add("hidden");
-                setTimeout(() => {
-                    loader.style.display = "none";
-                    loader.classList.remove("active");
-                }, 500); // Match CSS transition duration
-            }, 800); // Brief delay for spinner
+        // Filter projects
+        projectCards.forEach(card => {
+            const category = card.getAttribute("data-category");
+            if (filter === "all" || category === filter) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
         });
+
+        // Hide loader after 0.8s
+        setTimeout(() => {
+            loader.classList.add("hidden");
+            setTimeout(() => {
+                loader.style.display = "none";
+                loader.classList.remove("active");
+            }, 500); // Match CSS transition duration
+        }, 800); // Brief delay for spinner
     });
-    
+});
+
 //---------------------End Filter Loader
 
 // Event listeners for language buttons

@@ -55,7 +55,11 @@ const translations = {
     newsletter_title: "Subscribe to Our Newsletter",
     newsletter_email: "Your Email",
     newsletter_submit: "Subscribe",
-    copyright_text: "Copyright © 2025 CLICKORA⁺. All Rights Reserved."
+    copyright_text: "Copyright © 2025 CLICKORA⁺. All Rights Reserved.",
+    footer_about_title: "About Clickora",
+    footer_about_desc: "Clickora is a leading marketing agency dedicated to helping businesses stand out, scale up, and succeed with innovative strategies and creative solutions.",
+    footer_quick_links: "Quick Links",
+    footer_follow_us: "Follow Us"
   },
   fr: {
     main_title: "Bonjour, nous sommes CLICKORA.<br/><span>Agence de Marketing</span>",
@@ -112,7 +116,11 @@ const translations = {
     newsletter_title: "Inscrivez-vous à notre newsletter",
     newsletter_email: "Votre email",
     newsletter_submit: "S'inscrire",
-    copyright_text: "Copyright © 2025 CLICKORA⁺. Tous droits réservés."
+    copyright_text: "Copyright © 2025 CLICKORA⁺. Tous droits réservés.",
+    footer_about_title: "À propos de Clickora",
+    footer_about_desc: "Clickora est une agence de marketing de premier plan dédiée à aider les entreprises à se démarquer, à se développer et à réussir grâce à des stratégies innovantes et des solutions créatives.",
+    footer_quick_links: "Liens rapides",
+    footer_follow_us: "Suivez-nous"
   },
   ar: {
     main_title: ".مرحبًا، نحن كليكورا<br/><span>وكالة تسويق</span>",
@@ -169,6 +177,10 @@ const translations = {
     newsletter_title: "اشترك في نشرتنا الإخبارية",
     newsletter_email: "بريدك الإلكتروني",
     newsletter_submit: "اشترك",
-    copyright_text: ".حقوق الطبع والنشر © 2025 كليكورا⁺. جميع الحقوق محفوظة"
+    copyright_text: ".حقوق الطبع والنشر © 2025 كليكورا⁺. جميع الحقوق محفوظة",
+    footer_about_title: "عن كليكورا",
+    footer_about_desc: ".كليكورا هي وكالة تسويق رائدة مكرسة لمساعدة الشركات على التميز والنمو والنجاح من خلال استراتيجيات مبتكرة وحلول إبداعية",
+    footer_quick_links: "روابط سريعة",
+    footer_follow_us: "تابعنا"
   }
 };

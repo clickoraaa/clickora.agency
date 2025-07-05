@@ -58,8 +58,6 @@
     <!-- link Swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-    <link rel="stylesheet" href="assets/css/packages.css">
-    <link rel="stylesheet" href="assets/css/team_cards.css">
 
     <!-- EmailJS -->
      <script type="text/javascript"
@@ -76,8 +74,6 @@
     <!-- Title -->
     <title>CLICKORA⁺ | Marketing Agency</title>
 
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   </head>
   <body>
@@ -90,12 +86,12 @@
       <a href="#" class="logo">
         <img src="assets/image/Logo_NoBg.png" alt="CLICKORA⁺"/>
       </a>
-      <nav class="navigation">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#packages">Our Packages</a>
-        <a href="#ourTeam">Our Team</a>
-        <a href="#contact">Contact</a>
+      <nav class="navigation" aria-label="Main navigation">
+        <a href="#services" role="menuitem">Services</a>
+        <a href="#projects" role="menuitem">Projects</a>
+        <a href="#packages" role="menuitem">Our Packages</a>
+        <a href="#ourTeam" role="menuitem">Our Team</a>
+        <a href="#contact" role="menuitem">Contact</a>
       </nav>
       <i id="btnMenu" class="fa-solid fa-bars"></i>
     </header>
@@ -446,7 +442,7 @@
     <!-- Member 1 -->
     <article class="profile">
       <div class="profile__wrapper">
-        <img src="assets/image/founder.png" alt="Profile Picture" class="background-img">
+        <img src="assets/image/founder.png" alt="Youssef Yakoubi, Founder and Creative Director" class="background-img">
         <div class="profile__content">
           <h2>Youssef Yakoubi <img src="assets/image/verified.svg" alt="Verified Badge" class="verified"></h2>
           <p class="description">
@@ -469,7 +465,7 @@
     <!-- Member 2 -->
     <article class="profile">
       <div class="profile__wrapper">
-        <img src="assets/image/webSolutions.png" alt="Profile Picture" class="background-img">
+        <img src="assets/image/webSolutions.png" alt="Mohamed Rayen Elmi, Web Solutions Expert" class="background-img">
         <div class="profile__content">
           <h2>Mohamed Rayen Elmi <img src="assets/image/verified.svg" alt="Verified Badge" class="verified"></h2>
           <p class="description">
@@ -495,7 +491,7 @@
     <!-- Member 3 Temporal -->
      <article class="profile">
       <div class="profile__wrapper">
-        <img src="assets/image/member3.png" alt="Profile Picture" class="background-img">
+        <img src="assets/image/member3.png" alt="Jawher Sbabti, Buissness Analyst" class="background-img">
         <div class="profile__content">
           <h2>Jawher Sbabti <img src="assets/image/verified.svg" alt="Verified Badge" class="verified"></h2>
           <p class="description">
@@ -518,7 +514,7 @@
     <!-- Member 4 Temporal -->
      <article class="profile">
       <div class="profile__wrapper">
-        <img src="assets/image/member4.png" alt="Profile Picture" class="background-img">
+        <img src="assets/image/member4.png" alt="Sahar Gharby, Assistant" class="background-img">
         <div class="profile__content">
           <h2>Sahar Gharby <img src="assets/image/verified.svg" alt="Verified Badge" class="verified"></h2>
           <p class="description">
@@ -547,15 +543,7 @@
       <h2 class="title newsletter-title">Subscribe To Our Newsletter</h2>
       <div
         class="newsletter-form">
-        <input
-          type="email"
-          name="email"
-          id="email_newsletter"
-          placeholder="Your Email"
-          required
-          autocomplete="off"
-          class="newsletter-email"
-        />
+        <input type="email" name="email" id="email_newsletter" placeholder="Your Email" required autocomplete="email" class="newsletter-email" />
         <button type="submit" onclick="subscribeNewsletter()" class="newsletter-submit">Subscribe</button>
       </div>
     </section>
@@ -567,58 +555,26 @@
       <div class="online-sub">
         <h2 class="contact-team-title">Contact Our Team</h2>
         <div class="online-form">
-          <input
-            type="text"
-            name="Name"
-            id="Name"
-            placeholder="Your Name"
-            required
-            autocomplete="off"
-            class="contact-name"
-          />
-          <input
-            type="email"
-            name="Email"
-            id="Email"
-            placeholder="Your Email"
-            required
-            autocomplete="off"
-            class="contact-email"
-          />
+          <input type="text" name="Name" id="Name" placeholder="Your Name" required autocomplete="name" class="contact-name" />
+          <input type="email" name="Email" id="Email" placeholder="Your Email" required autocomplete="email" class="contact-email" />
           <select name="Service" id="Service" class="contact-service" required>
-            <option
-              value=""
-              disabled
-              selected
-              class="contact-service-default"
-            >
-              Select a service
-            </option>
-            <option value="Content Creation" class="contact-service-1">
-              Content Creation
-            </option>
-            <option value="Social Media Management" class="contact-service-2">
-              Social Media Management
-            </option>
-            <option value="Web Development" class="contact-service-3">
-              Web Development
-            </option>
-            <option value="Marketing Strategy" class="contact-service-4">
-              Marketing Strategy
-            </option>
-            <option value="Other" class="contact-service-5">Other</option>
+              <option value="" disabled selected class="contact-service-default">Select a service</option>
+              <option value="Content Creation" class="contact-service-1">
+                Content Creation
+              </option>
+              <option value="Social Media Management" class="contact-service-2">
+                Social Media Management
+              </option>
+              <option value="Web Development" class="contact-service-3">
+                Web Development
+              </option>
+              <option value="Marketing Strategy" class="contact-service-4">
+                Marketing Strategy
+              </option>
+              <option value="Other" class="contact-service-5">Other</option>
           </select>
           <select name="Package" id="Package" class="contact-package" required>
-            <option
-              value=""
-              disabled
-              selected
-              '
-
-              class="contact-package-default"
-            >
-              Select a package
-            </option>
+            <option value="" disabled selected class="contact-package-default">Select a package</option>
             <optgroup label="Social Media Management Packages" class="contact-package-label1">
               <option value="Starter – Essential Presence">
                 Starter – Essential Presence
@@ -675,11 +631,32 @@
   </section>
 
     <!-- Copyright Section -->
-    <section class="copyright">
-      <span class="content copyright-text"
-        >Copyright © 2025 CLICKORA⁺. All Rights Reserved.</span
-      >
-    </section>
+    <footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>About Clickora⁺</h3>
+            <p>Clickora is a leading marketing agency dedicated to helping businesses stand out, scale up, and succeed with innovative strategies and creative solutions.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#packages">Our Packages</a>
+            <a href="#ourTeam">Our Team</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-column social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/clickora.agency/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@clickora_marketingagency"target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom copyright-text">
+        <p>Copyright © 2025 CLICKORA⁺. All Rights Reserved.</p>
+    </div>
+</footer>
 
     <!-- Language Switcher -->
     <div class="language-switcher">
@@ -704,17 +681,9 @@
 </div>
 
     <!-- Script Section -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      // Initialize AOS
-      AOS.init({
-        duration: 800, // animation duration in milliseconds
-        easing: 'ease-in-out', // default easing
-        once: true, // whether animation should happen only once
-        offset: 100, // offset (in px) from the original trigger point
-      });
-    </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/scroll.js"></script>
     <script src="assets/js/email_js.js"></script>
     <script src="assets/js/translations.js"></script>
     <script src="assets/js/burger_links.js"></script>
