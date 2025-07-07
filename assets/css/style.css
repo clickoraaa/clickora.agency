@@ -347,6 +347,7 @@ body[lang="ar"] .newsletter-form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    scroll-margin-top: 40px;
 }
 
 #services .title {
@@ -402,11 +403,11 @@ body[lang="ar"] .newsletter-form {
     padding: 80px 100px;
     background-color: black;
     min-height: 100vh;
+    scroll-margin-top: 40px;
 }
 
 .projects .content {
     margin-top: 20px;
-
 }
 
 .Project-card {
@@ -502,6 +503,7 @@ body[lang="ar"] .newsletter-form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    scroll-margin-top: 40px;
 }
 
 #ourTeam .content {
@@ -710,6 +712,7 @@ body[lang="ar"] .newsletter-form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    scroll-margin-top: 40px;
 }
 
 .contact-sec {
@@ -1838,6 +1841,7 @@ body[lang="ar"] .newsletter-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  scroll-margin-top: 40px;
 }
 
 .packages .title {
