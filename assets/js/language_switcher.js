@@ -77,7 +77,7 @@ function changeLanguage(lang) {
     document.querySelector(".newsletter-title").textContent = translations[lang].newsletter_title;
     document.querySelector(".newsletter-email").setAttribute("placeholder", translations[lang].newsletter_email);
     document.querySelector(".newsletter-submit").textContent = translations[lang].newsletter_submit;
-    document.querySelector(".copyright-text").textContent = translations[lang].copyright_text;
+    // document.querySelector(".copyright-text").textContent = translations[lang].copyright_text;
 
     // Footer translations
     document.querySelector(".footer-column:nth-child(1) h3").textContent = translations[lang].footer_about_title;
