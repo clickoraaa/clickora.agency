@@ -2240,12 +2240,3 @@ footer {
         font-size: clamp(0.9rem, 2.2vw, 1rem);
     }
 }
-
-.copyright-owner{
-    color: #f04343;
-    font-weight: 700;
-}
-
-.copyright-owner:hover{
-    color: var(--white);
-}
