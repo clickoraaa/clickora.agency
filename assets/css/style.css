@@ -639,12 +639,6 @@ body[lang="ar"] .newsletter-form {
   transform: scale(1.1);
 }
 
-#ourTeam .content .profile .profile__wrapper .button-actions .portfolio-btn:hover {
-  background-color: #f53131;
-  color: var(--white);
-  transform: scale(1.1);
-}
-
 /* Newsletter*/
 .newsletter {
     padding: 80px 100px;
