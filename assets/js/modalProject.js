@@ -39,8 +39,8 @@
     project6: {
       title: 'Web & Landing Pages Project',
       images: [
-        { src: 'assets/image/qr_code.jpeg', alt: 'Project 6 Image 1' },
-        { src: 'assets/image/coming_soon.gif', alt: 'Project 6 Image 2' }
+        { src: 'assets/image/coming_soon.gif', alt: 'Project 6 Image 1' },
+        { src: 'assets/image/Logo_W.jpg', alt: 'Project 6 Image 2' }
       ]
     },
     project7: {
